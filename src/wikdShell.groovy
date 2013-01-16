@@ -1,3 +1,6 @@
+// @CacheScriptContent(true)
+// @ExecutionModes({ON_SINGLE_NODE})
+
 import groovy.ui.Console
 
 def binding = getBinding()
