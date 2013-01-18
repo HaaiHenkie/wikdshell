@@ -141,7 +141,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <hook NAME="FlexibleLayout" VALUE="CHILDREN"/>
 <node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1358490078344">
@@ -161,7 +160,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="Groovy shell for interacting with a running Freeplane" ID="ID_829083199" CREATED="1358480280068" MODIFIED="1358480301135">
@@ -182,7 +180,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="0.1.0" ID="ID_1427326428" CREATED="1358480304748" MODIFIED="1358480313359">
@@ -212,7 +209,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&#xa0;&#xa0;See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1182518149" CREATED="1358397138412" MODIFIED="1358397138412"/>
 </node>
@@ -233,7 +229,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
@@ -251,7 +246,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1358490078353">
@@ -268,7 +262,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="en" ID="ID_502342550" CREATED="1358397138447" MODIFIED="1358480613945">
@@ -296,7 +289,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="30" VALUE_WIDTH="216"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
@@ -424,10 +416,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="wikdShell.groovy" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1358490064035">
+<node TEXT="wikdShell.groovy" FOLDED="true" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1358490064035">
 <attribute_layout NAME_WIDTH="206" VALUE_WIDTH="206"/>
 <attribute NAME="menuTitleKey" VALUE="shellName"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting"/>
@@ -438,6 +429,7 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<node TEXT="// @CacheScriptContent(true)&#xa;// @ExecutionModes({ON_SINGLE_NODE})&#xa;&#xa;import groovy.ui.Console&#xa;&#xa;def binding = getBinding()&#xa;&#xa;def console = new Console(binding)&#xa;console.setVariable(&apos;binding&apos;, binding)&#xa;console.setVariable(&apos;map&apos;, node.map)&#xa;console.setVariable(&apos;root&apos;, node.map.root)&#xa;console.run()" ID="ID_955271674" CREATED="1358490085680" MODIFIED="1358490085681"/>
 </node>
 </node>
 <node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1358490078371">
@@ -484,7 +476,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1358490078375">
@@ -521,7 +512,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
