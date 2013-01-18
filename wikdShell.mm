@@ -162,7 +162,7 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="Groovy shell for interacting with a running Freeplane" ID="ID_829083199" CREATED="1358480280068" MODIFIED="1358480301135">
+<node TEXT="Groovy console for interacting with a running Freeplane instance" ID="ID_829083199" CREATED="1358480280068" MODIFIED="1358494181519">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
