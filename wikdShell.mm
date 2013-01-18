@@ -1,6 +1,6 @@
 <map version="freeplane 1.2.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1358490078337" BACKGROUND_COLOR="#97c7dc">
+<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1358492110769" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
@@ -141,10 +141,9 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <hook NAME="FlexibleLayout" VALUE="CHILDREN"/>
-<node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1358490078344">
+<node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1358492110778">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE">
 
@@ -161,14 +160,13 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="Groovy shell for interacting with a running Freeplane" ID="ID_829083199" CREATED="1358480280068" MODIFIED="1358480301135">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_26360570" CREATED="1358397138400" MODIFIED="1358490078345">
+<node TEXT="changes" POSITION="left" ID="ID_26360570" CREATED="1358397138400" MODIFIED="1358492110780">
 <edge COLOR="#0000ff"/>
 <richcontent TYPE="NOTE">
 
@@ -182,7 +180,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="0.1.0" ID="ID_1427326428" CREATED="1358480304748" MODIFIED="1358480313359">
@@ -192,7 +189,7 @@
 </node>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1358490078347">
+<node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1358492110783">
 <edge COLOR="#00ff00"/>
 <richcontent TYPE="NOTE">
 
@@ -212,11 +209,12 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&#xa0;&#xa0;See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1182518149" CREATED="1358397138412" MODIFIED="1358397138412"/>
+<node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&#xa0;&#xa0;See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1182518149" CREATED="1358397138412" MODIFIED="1358397138412">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_892155711" CREATED="1358397138421" MODIFIED="1358490078350">
+</node>
+<node TEXT="preferences.xml" POSITION="left" ID="ID_892155711" CREATED="1358397138421" MODIFIED="1358492110786">
 <edge COLOR="#ff00ff"/>
 <richcontent TYPE="NOTE">
 
@@ -233,11 +231,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_762310990" CREATED="1358397138437" MODIFIED="1358490078351">
+<node TEXT="default.properties" POSITION="left" ID="ID_762310990" CREATED="1358397138437" MODIFIED="1358492110789">
 <edge COLOR="#00ffff"/>
 <richcontent TYPE="NOTE">
 
@@ -251,10 +248,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1358490078353">
+<node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1358492110792">
 <edge COLOR="#ffff00"/>
 <richcontent TYPE="NOTE">
 
@@ -268,7 +265,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="en" ID="ID_502342550" CREATED="1358397138447" MODIFIED="1358480613945">
@@ -282,7 +278,7 @@
 <attribute NAME="shellName" VALUE="Groovy-Konsole"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1716047542" CREATED="1358397138451" MODIFIED="1358490078355">
+<node TEXT="deinstall" POSITION="left" ID="ID_1716047542" CREATED="1358397138451" MODIFIED="1358492304533">
 <edge COLOR="#7c0000"/>
 <richcontent TYPE="NOTE">
 
@@ -296,13 +292,15 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<attribute_layout NAME_WIDTH="30" VALUE_WIDTH="216"/>
+<attribute_layout NAME_WIDTH="30" VALUE_WIDTH="309"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/scripts/wikdShell.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell-icon.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell-screenshot-1.png"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1656924893" CREATED="1358397138459" MODIFIED="1358490078364">
+<node TEXT="scripts" POSITION="right" ID="ID_1656924893" CREATED="1358397138459" MODIFIED="1358492110805">
 <edge COLOR="#00007c"/>
 <richcontent TYPE="NOTE">
 
@@ -424,7 +422,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="wikdShell.groovy" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1358490064035">
@@ -440,7 +437,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1358490078371">
+<node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1358492110813">
 <edge COLOR="#007c00"/>
 <richcontent TYPE="NOTE">
 
@@ -484,10 +481,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1358490078375">
+<node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1358492110818">
 <edge COLOR="#7c007c"/>
 <richcontent TYPE="NOTE">
 
@@ -521,9 +517,17 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+<node TEXT="${name}.png" ID="ID_473909841" CREATED="1357854883609" MODIFIED="1357866785018">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+</node>
+<node TEXT="${name}-icon.png" ID="ID_1117040601" CREATED="1357853471253" MODIFIED="1357866788268">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+</node>
+<node TEXT="${name}-screenshot-1.png" ID="ID_1706510600" CREATED="1357855573438" MODIFIED="1357866791195">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+</node>
 </node>
 </node>
 </map>
