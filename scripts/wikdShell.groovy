@@ -1,15 +1,10 @@
 // @CacheScriptContent(true)
 // @ExecutionModes({ON_SINGLE_NODE})
 
-import groovy.ui.Console
-
 import org.freeplane.plugin.script.FreeplaneScriptBaseClass
+import org.hardknots.wikd.wikdshell.WikdShell
 
-def binding = getBinding()
-
-def console = new Console(binding)
-console.setVariable('base', FreeplaneScriptBaseClass)
-console.setVariable('binding', binding)
+WikdShell console = new WikdShell(getBinding())
 console.setVariable('map', node.map)
 console.setVariable('root', node.map.root)
-console.run()
+console.run(node.map.name)

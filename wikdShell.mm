@@ -1,6 +1,6 @@
 <map version="freeplane 1.2.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1358492110769" BACKGROUND_COLOR="#97c7dc">
+<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1364449377831" BACKGROUND_COLOR="#97c7dc">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
@@ -102,10 +102,10 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="10"/>
-<attribute_layout NAME_WIDTH="103" VALUE_WIDTH="103"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="11"/>
+<attribute_layout NAME_WIDTH="103" VALUE_WIDTH="138"/>
 <attribute NAME="name" VALUE="wikdShell"/>
-<attribute NAME="version" VALUE="0.1.0"/>
+<attribute NAME="version" VALUE="0.2.3"/>
 <attribute NAME="author" VALUE="L. C. Rees"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.2.15"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -143,7 +143,7 @@
 </html>
 </richcontent>
 <hook NAME="FlexibleLayout" VALUE="CHILDREN"/>
-<node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1358492110778">
+<node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1364327809601">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE">
 
@@ -158,6 +158,9 @@
     <p>
       So you have to put the add-on description as a child of the <i>'description'</i>&#160;node.
     </p>
+    <p>
+      To translate the description you have to define a translation for the key 'addons.${name}.description'.
+    </p>
   </body>
 </html>
 </richcontent>
@@ -166,7 +169,7 @@
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_26360570" CREATED="1358397138400" MODIFIED="1358492110780">
+<node TEXT="changes" POSITION="left" ID="ID_26360570" CREATED="1358397138400" MODIFIED="1364327809603">
 <edge COLOR="#0000ff"/>
 <richcontent TYPE="NOTE">
 
@@ -182,14 +185,26 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="0.1.0" ID="ID_1427326428" CREATED="1358480304748" MODIFIED="1358480313359">
+<node TEXT="0.1.0" ID="ID_1427326428" CREATED="1358480304748" MODIFIED="1363657342348">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 <node TEXT="initial release" ID="ID_1864051103" CREATED="1358480313804" MODIFIED="1358480317887">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
+<node TEXT="0.2.0" ID="ID_1525962490" CREATED="1363657345547" MODIFIED="1363657355311">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+<node TEXT="path improvements" ID="ID_1215329881" CREATED="1363657356410" MODIFIED="1363657365231">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1358492110783">
+<node TEXT="properly inject variables" ID="ID_241233608" CREATED="1364183394496" MODIFIED="1364183410811">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+</node>
+<node TEXT="trigger garbage collection" ID="ID_1030853563" CREATED="1364079814427" MODIFIED="1364080011682">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+</node>
+</node>
+</node>
+<node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1364327809605">
 <edge COLOR="#00ff00"/>
 <richcontent TYPE="NOTE">
 
@@ -214,7 +229,7 @@
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_892155711" CREATED="1358397138421" MODIFIED="1358492110786">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_892155711" CREATED="1358397138421" MODIFIED="1364327809608">
 <edge COLOR="#ff00ff"/>
 <richcontent TYPE="NOTE">
 
@@ -234,7 +249,7 @@
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_762310990" CREATED="1358397138437" MODIFIED="1358492110789">
+<node TEXT="default.properties" POSITION="left" ID="ID_762310990" CREATED="1358397138437" MODIFIED="1364327809610">
 <edge COLOR="#00ffff"/>
 <richcontent TYPE="NOTE">
 
@@ -251,7 +266,7 @@
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1358492110792">
+<node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1364327809613">
 <edge COLOR="#ffff00"/>
 <richcontent TYPE="NOTE">
 
@@ -261,24 +276,34 @@
   </head>
   <body>
     <p>
-      The translation keys that this script uses. Define one child node per supported locale. The attributes contain the translations. Define at least 'addons.${name}' for the add-on's name.
+      The translation keys that this script uses. Define one child node per supported locale. The attributes contain the translations. Define at least
     </p>
+    <ul>
+      <li>
+        'addons.${name}' for the add-on's name
+      </li>
+      <li>
+        'addons.${name}.description' for the description, e.g. in the add-on overview dialog (not necessary for English)
+      </li>
+    </ul>
   </body>
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="en" ID="ID_502342550" CREATED="1358397138447" MODIFIED="1358480613945">
+<node TEXT="en" ID="ID_502342550" CREATED="1358397138447" MODIFIED="1364358380502">
 <attribute_layout NAME_WIDTH="76" VALUE_WIDTH="76"/>
 <attribute NAME="addons.${name}" VALUE="wikdShell"/>
-<attribute NAME="shellName" VALUE="Groovy Console"/>
+<attribute NAME="shellName" VALUE="Groovy console"/>
+<attribute NAME="freeMemory" VALUE="Free memory"/>
 </node>
-<node TEXT="de" ID="ID_1868805079" CREATED="1358480213382" MODIFIED="1358480634300">
+<node TEXT="de" ID="ID_1868805079" CREATED="1358480213382" MODIFIED="1364079775296">
 <attribute_layout NAME_WIDTH="76" VALUE_WIDTH="78"/>
 <attribute NAME="addons.${name}" VALUE="wikdShell"/>
 <attribute NAME="shellName" VALUE="Groovy-Konsole"/>
+<attribute NAME="freeMemory" VALUE="Freier Speicher"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1716047542" CREATED="1358397138451" MODIFIED="1358492304533">
+<node TEXT="uninstall" POSITION="left" ID="ID_1716047542" CREATED="1358397138451" MODIFIED="1364358405726">
 <edge COLOR="#7c0000"/>
 <richcontent TYPE="NOTE">
 
@@ -299,8 +324,10 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell-icon.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell-screenshot-1.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/scripts/wikdFreeMemory.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/jars/wikdshell.jar"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1656924893" CREATED="1358397138459" MODIFIED="1358492110805">
+<node TEXT="scripts" POSITION="right" ID="ID_1656924893" CREATED="1358397138459" MODIFIED="1364327809626">
 <edge COLOR="#00007c"/>
 <richcontent TYPE="NOTE">
 
@@ -310,7 +337,7 @@
   </head>
   <body>
     <p>
-      An add-on may contain multiple scripts. The node text defines the script name (e.g. inserInlineImage.groovy). Its properties have to be configured via attributes:
+      An add-on may contain multiple scripts. The node text defines the script name (e.g. inserInlineImage.groovy). The name has to end with .groovy and may only consist of letters and digits. The script properties have to be configured via attributes:
     </p>
     <p>
       
@@ -424,7 +451,7 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="wikdShell.groovy" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1358490064035">
+<node TEXT="wikdShell.groovy" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1363824267737">
 <attribute_layout NAME_WIDTH="206" VALUE_WIDTH="206"/>
 <attribute NAME="menuTitleKey" VALUE="shellName"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting"/>
@@ -436,8 +463,20 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
+<node TEXT="wikdFreeMemory.groovy" ID="ID_1910847337" CREATED="1364079593157" MODIFIED="1364079695749">
+<attribute_layout NAME_WIDTH="206" VALUE_WIDTH="206"/>
+<attribute NAME="menuTitleKey" VALUE="freeMemory"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE="meta G"/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1358492110813">
+</node>
+<node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1364327809642">
 <edge COLOR="#007c00"/>
 <richcontent TYPE="NOTE">
 
@@ -482,8 +521,9 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1358492110818">
+<node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1364327809648">
 <edge COLOR="#7c007c"/>
 <richcontent TYPE="NOTE">
 
@@ -506,10 +546,10 @@
     </p>
     <ul>
       <li>
-        <i>${name}.png</i>, like <i>oldicons-theme.png</i>. This will be used in the app-on details dialog.
+        <i>${name}-icon.png</i>, like <i>oldicons-theme-icon.png</i>. This will be used in the app-on overview.
       </li>
       <li>
-        <i>${name}-icon.png</i>, like <i>oldicons-theme-icon.png</i>. This will be used in the app-on overview.
+        <i>${name}-screenshot-1.png</i>, like <i>oldicons-theme-screenshot-1.png</i>. This will be used in the app-on details dialog. Further images can be included but they are not used yet.
       </li>
     </ul>
     <p>
@@ -526,6 +566,35 @@
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 <node TEXT="${name}-screenshot-1.png" ID="ID_1706510600" CREATED="1357855573438" MODIFIED="1357866791195">
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+</node>
+</node>
+<node TEXT="jars" POSITION="right" ID="ID_1540575809" CREATED="1364327809649" MODIFIED="1364327809654">
+<edge COLOR="#007c7c"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      An add-on may define any number of jars as child nodes of the jars node. The actual jar data has to be placed as base64 encoded binary data into the text of a subnode.
+    </p>
+    <p>
+      The jars are saved to the <i>${installationbase}/jars</i>&#160;directory.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Jars can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#160;since they have to be (base64) encoded as simple strings.
+    </p>
+  </body>
+</html>
+</richcontent>
+<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
+<node TEXT="wikdshell.jar" ID="ID_1221660213" CREATED="1363824242643" MODIFIED="1363824245560">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>

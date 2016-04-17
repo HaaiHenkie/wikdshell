@@ -26,3 +26,5 @@ syntax: glob
 .tox/*
 syntax: regexp
 ^stuff$
+syntax: regexp
+^scripts/freeplane\.dsld$

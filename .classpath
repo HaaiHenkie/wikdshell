@@ -9,7 +9,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_formula"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_help"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_latex"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_openmaps"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_script"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_script_test"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/freeplane_plugin_svg"/>
