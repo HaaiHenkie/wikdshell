@@ -1,6 +1,6 @@
-<map version="freeplane 1.2.0">
+<map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1364449377831" BACKGROUND_COLOR="#97c7dc">
+<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1460943051503" BACKGROUND_COLOR="#97c7dc" LINK="https://github.com/vboerchers/wikdshell">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
@@ -102,13 +102,14 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="11"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="2"/>
 <attribute_layout NAME_WIDTH="103" VALUE_WIDTH="138"/>
 <attribute NAME="name" VALUE="wikdShell"/>
 <attribute NAME="version" VALUE="0.2.3"/>
 <attribute NAME="author" VALUE="L. C. Rees"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.2.15"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
+<attribute NAME="updateUrl" VALUE=""/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -138,12 +139,15 @@
       <li>
         freeplane-version-to: Normally empty: The newest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too new.
       </li>
+      <li>
+        updateUrl: URL of the file containing information (version, download url) on the latest version of this add-on. By default: &quot;${homepage}/version.properties&quot;
+      </li>
     </ul>
   </body>
 </html>
 </richcontent>
 <hook NAME="FlexibleLayout" VALUE="CHILDREN"/>
-<node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1364327809601">
+<node TEXT="description" POSITION="left" ID="ID_1476543373" CREATED="1358397138392" MODIFIED="1460942569860">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE">
 
@@ -169,7 +173,7 @@
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_26360570" CREATED="1358397138400" MODIFIED="1364327809603">
+<node TEXT="changes" POSITION="left" ID="ID_26360570" CREATED="1358397138400" MODIFIED="1460942569870">
 <edge COLOR="#0000ff"/>
 <richcontent TYPE="NOTE">
 
@@ -204,7 +208,7 @@
 </node>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1364327809605">
+<node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1460942569880">
 <edge COLOR="#00ff00"/>
 <richcontent TYPE="NOTE">
 
@@ -229,7 +233,7 @@
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_892155711" CREATED="1358397138421" MODIFIED="1364327809608">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_892155711" CREATED="1358397138421" MODIFIED="1460942569906">
 <edge COLOR="#ff00ff"/>
 <richcontent TYPE="NOTE">
 
@@ -249,7 +253,7 @@
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_762310990" CREATED="1358397138437" MODIFIED="1364327809610">
+<node TEXT="default.properties" POSITION="left" ID="ID_762310990" CREATED="1358397138437" MODIFIED="1460942569915">
 <edge COLOR="#00ffff"/>
 <richcontent TYPE="NOTE">
 
@@ -266,7 +270,7 @@
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1364327809613">
+<node TEXT="translations" POSITION="left" ID="ID_1542326927" CREATED="1358397138442" MODIFIED="1460942569923">
 <edge COLOR="#ffff00"/>
 <richcontent TYPE="NOTE">
 
@@ -284,6 +288,9 @@
       </li>
       <li>
         'addons.${name}.description' for the description, e.g. in the add-on overview dialog (not necessary for English)
+      </li>
+      <li>
+        'addons.${name}.&lt;scriptname&gt;' for each script since it will be the menu title.
       </li>
     </ul>
   </body>
@@ -303,7 +310,7 @@
 <attribute NAME="freeMemory" VALUE="Freier Speicher"/>
 </node>
 </node>
-<node TEXT="uninstall" POSITION="left" ID="ID_1716047542" CREATED="1358397138451" MODIFIED="1364358405726">
+<node TEXT="deinstall" POSITION="left" ID="ID_1716047542" CREATED="1358397138451" MODIFIED="1460942952411">
 <edge COLOR="#7c0000"/>
 <richcontent TYPE="NOTE">
 
@@ -313,21 +320,21 @@
   </head>
   <body>
     <p>
-      List of files and/or directories to remove on deinstall
+      List of files and/or directories to remove on uninstall
     </p>
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="30" VALUE_WIDTH="309"/>
+<attribute_layout NAME_WIDTH="51" VALUE_WIDTH="447"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
-<attribute NAME="delete" VALUE="${installationbase}/scripts/wikdShell.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/wikdShell.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/wikdFreeMemory.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell-icon.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/wikdShell-screenshot-1.png"/>
-<attribute NAME="delete" VALUE="${installationbase}/scripts/wikdFreeMemory.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/jars/wikdshell.jar"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1656924893" CREATED="1358397138459" MODIFIED="1364327809626">
+<node TEXT="scripts" POSITION="right" ID="ID_1656924893" CREATED="1358397138459" MODIFIED="1460942569974">
 <edge COLOR="#00007c"/>
 <richcontent TYPE="NOTE">
 
@@ -337,7 +344,7 @@
   </head>
   <body>
     <p>
-      An add-on may contain multiple scripts. The node text defines the script name (e.g. inserInlineImage.groovy). The name has to end with .groovy and may only consist of letters and digits. The script properties have to be configured via attributes:
+      An add-on may contain multiple scripts. The node text defines the script name (e.g. inserInlineImage.groovy). The name must have a suffix of a supported script language like .groovy or .js and may only consist of letters and digits. The script properties have to be configured via attributes:
     </p>
     <p>
       
@@ -451,7 +458,7 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="wikdShell.groovy" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1363824267737">
+<node TEXT="wikdShell.groovy" ID="ID_705079003" CREATED="1358480127293" MODIFIED="1461020049373">
 <attribute_layout NAME_WIDTH="206" VALUE_WIDTH="206"/>
 <attribute NAME="menuTitleKey" VALUE="shellName"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting"/>
@@ -459,7 +466,7 @@
 <attribute NAME="keyboardShortcut" VALUE="control alt G"/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
-<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
@@ -476,7 +483,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1364327809642">
+<node TEXT="zips" POSITION="right" ID="ID_686396268" CREATED="1358397138476" MODIFIED="1460942570030">
 <edge COLOR="#007c00"/>
 <richcontent TYPE="NOTE">
 
@@ -504,7 +511,7 @@
       
     </p>
     <p>
-      &#160;- Any zip file will be extracted in the &lt;installationbase&gt;. Currently, &lt;installationbase&gt; is always Freeplane's &lt;userhome&gt;, e.g. ~/.freeplane/1.2.
+      &#160;- Any zip file will be extracted in the &lt;installationbase&gt;. Currently, &lt;installationbase&gt; is always Freeplane's &lt;userhome&gt;, e.g. ~/.freeplane/1.3.
     </p>
     <p>
       
@@ -512,18 +519,12 @@
     <p>
       &#160;- The files will be processed in the sequence as seen in the map.
     </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;- Zip files must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#160;since they have to be (base64) encoded as simple strings.
-    </p>
   </body>
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1364327809648">
+<node TEXT="images" POSITION="right" ID="ID_1421584650" CREATED="1358397138484" MODIFIED="1460942570040">
 <edge COLOR="#7c007c"/>
 <richcontent TYPE="NOTE">
 
@@ -569,8 +570,8 @@
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>
-<node TEXT="jars" POSITION="right" ID="ID_1540575809" CREATED="1364327809649" MODIFIED="1364327809654">
-<edge COLOR="#007c7c"/>
+<node TEXT="lib" POSITION="right" ID="ID_538510165" CREATED="1460942570009" MODIFIED="1460943140644">
+<edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -579,22 +580,36 @@
   </head>
   <body>
     <p>
-      An add-on may define any number of jars as child nodes of the jars node. The actual jar data has to be placed as base64 encoded binary data into the text of a subnode.
-    </p>
-    <p>
-      The jars are saved to the <i>${installationbase}/jars</i>&#160;directory.
+      An add-on may contain any number of nodes containing binary files (normally .jar files) to be added to the add-on's classpath.
     </p>
     <p>
       
     </p>
     <p>
-      Jars can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#160;since they have to be (base64) encoded as simple strings.
+      &#160;- The immediate child nodes contain the name of the file, e.g. 'mysql-connector-java-5.1.25.jar'). Put the file into a 'lib' subdirectory of the add-on base directory.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;- The child nodes of these nodes contain the actual files.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;- Any lib file will be extracted in &lt;installationbase&gt;/&lt;addonname&gt;/lib.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
-<node TEXT="wikdshell.jar" ID="ID_1221660213" CREATED="1363824242643" MODIFIED="1363824245560">
+<node TEXT="wikdshell.jar" ID="ID_1221660213" CREATED="1363824242643" MODIFIED="1460943141198">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
 </node>

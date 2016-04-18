@@ -31,6 +31,7 @@ import org.codehaus.groovy.tools.LoaderConfiguration
 import org.codehaus.groovy.tools.RootLoader
 import org.freeplane.core.resources.ResourceController as RC
 import org.freeplane.plugin.script.FreeplaneScriptBaseClass as FSBC
+import org.freeplane.plugin.script.ScriptResources;
 import org.freeplane.plugin.script.ScriptingConfiguration
 
 /**
@@ -67,7 +68,6 @@ class WikdShell extends Console {
 		menuBarDelegate: { arg -> current.JMenuBar = build(arg) }
 	]
 
-	@Override
 	void run(String title) {
 		MAP_NAME = title
 		run(frameWikdShellDelegates)
@@ -100,7 +100,7 @@ class WikdShell extends Console {
 			config.addCompilationCustomizers(new ATC(ThreadInterrupt))
 		def lc = new LoaderConfiguration()
 		config.setScriptBaseClass(FSBC.class.getName())
-		new ScriptingConfiguration().getClasspath().each { lc.addFile(it) }
+		ScriptResources.getClasspath().each { lc.addFile(it) }
 		shell = new GroovyShell(new RootLoader(lc), binding, config)
 	}
 
