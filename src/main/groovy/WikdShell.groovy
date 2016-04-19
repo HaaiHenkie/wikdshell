@@ -28,10 +28,8 @@ import javax.swing.*
 import org.codehaus.groovy.control.CompilerConfiguration
 import org.codehaus.groovy.control.customizers.ASTTransformationCustomizer as ATC
 import org.codehaus.groovy.tools.LoaderConfiguration
-import org.codehaus.groovy.tools.RootLoader
 import org.freeplane.core.resources.ResourceController as RC
 import org.freeplane.plugin.script.FreeplaneScriptBaseClass as FSBC
-import org.freeplane.plugin.script.ScriptResources;
 import org.freeplane.plugin.script.ScriptingConfiguration
 
 /**
@@ -98,10 +96,8 @@ class WikdShell extends Console {
 		config = new CompilerConfiguration()
 		if (threadInterrupt)
 			config.addCompilationCustomizers(new ATC(ThreadInterrupt))
-		def lc = new LoaderConfiguration()
 		config.setScriptBaseClass(FSBC.class.getName())
-		ScriptResources.getClasspath().each { lc.addFile(it) }
-		shell = new GroovyShell(new RootLoader(lc), binding, config)
+		shell = new GroovyShell(null, binding, config)
 	}
 
 	// Return false if use elected to cancel
