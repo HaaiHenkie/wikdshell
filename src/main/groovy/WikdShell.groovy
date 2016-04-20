@@ -40,7 +40,6 @@ import org.freeplane.plugin.script.ScriptingConfiguration
 @InheritConstructors
 class WikdShell extends Console {
 
-	boolean scriptRunning = false
 	static String MAP_NAME
 	final static String DEFAULT_WINDOW_TITLE = 'wikdShell'
 	File currentFileChooserDir = new File(
