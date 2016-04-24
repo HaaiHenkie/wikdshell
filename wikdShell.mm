@@ -1,6 +1,6 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1460943051503" BACKGROUND_COLOR="#97c7dc" LINK="https://github.com/vboerchers/wikdshell">
+<node TEXT="wikdShell" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1461510327660" BACKGROUND_COLOR="#97c7dc" LINK="https://github.com/vboerchers/wikdshell">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
@@ -105,9 +105,9 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="2"/>
 <attribute_layout NAME_WIDTH="103" VALUE_WIDTH="138"/>
 <attribute NAME="name" VALUE="wikdShell"/>
-<attribute NAME="version" VALUE="0.2.3"/>
+<attribute NAME="version" VALUE="0.3.0"/>
 <attribute NAME="author" VALUE="L. C. Rees"/>
-<attribute NAME="freeplaneVersionFrom" VALUE="1.2.15"/>
+<attribute NAME="freeplaneVersionFrom" VALUE="1.3.14"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <richcontent TYPE="NOTE">
@@ -206,6 +206,11 @@
 <node TEXT="trigger garbage collection" ID="ID_1030853563" CREATED="1364079814427" MODIFIED="1364080011682">
 <attribute_layout NAME_WIDTH="100" VALUE_WIDTH="100"/>
 </node>
+</node>
+<node TEXT="0.3.0" ID="ID_760556284" CREATED="1461185230350" MODIFIED="1461185240236">
+<node TEXT="ported to Freeplane 1.5" ID="ID_1768772947" CREATED="1461185244847" MODIFIED="1461194765020"/>
+<node TEXT="fixed problem &quot;Cannot run script now as a script is already running&quot;" ID="ID_716335322" CREATED="1461185263923" MODIFIED="1461185318238"/>
+<node TEXT="new home after L. C. Rees has abandoned the project" ID="ID_1995811703" CREATED="1461194767683" MODIFIED="1461194827796" LINK="https://github.com/vboerchers/wikdshell"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1460942569880">
