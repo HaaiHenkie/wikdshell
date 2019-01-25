@@ -22,15 +22,14 @@ import groovy.transform.ThreadInterrupt
 import groovy.ui.Console
 import groovy.ui.ConsoleActions
 import groovy.ui.ConsoleView
+import org.freeplane.plugin.script.GroovyScript
 
 import javax.swing.*
 
 import org.codehaus.groovy.control.CompilerConfiguration
 import org.codehaus.groovy.control.customizers.ASTTransformationCustomizer as ATC
-import org.codehaus.groovy.tools.LoaderConfiguration
 import org.freeplane.core.resources.ResourceController as RC
 import org.freeplane.plugin.script.FreeplaneScriptBaseClass as FSBC
-import org.freeplane.plugin.script.ScriptingConfiguration
 
 /**
  * Freeplane Groovy Swing console.
@@ -92,10 +91,9 @@ class WikdShell extends Console {
 
 	@Override
 	void newScript(ClassLoader parent, Binding binding) {
-		config = new CompilerConfiguration()
+		config = GroovyScript.createCompilerConfiguration()
 		if (threadInterrupt)
 			config.addCompilationCustomizers(new ATC(ThreadInterrupt))
-		config.setScriptBaseClass(FSBC.class.getName())
 		shell = new GroovyShell(null, binding, config)
 	}
 
