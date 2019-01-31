@@ -105,9 +105,9 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="2"/>
 <attribute_layout NAME_WIDTH="103" VALUE_WIDTH="138"/>
 <attribute NAME="name" VALUE="wikdShell"/>
-<attribute NAME="version" VALUE="0.3.0"/>
+<attribute NAME="version" VALUE="0.3.1"/>
 <attribute NAME="author" VALUE="L. C. Rees"/>
-<attribute NAME="freeplaneVersionFrom" VALUE="1.3.14"/>
+<attribute NAME="freeplaneVersionFrom" VALUE="1.7.4"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <richcontent TYPE="NOTE">
@@ -211,6 +211,9 @@
 <node TEXT="ported to Freeplane 1.5" ID="ID_1768772947" CREATED="1461185244847" MODIFIED="1461194765020"/>
 <node TEXT="fixed problem &quot;Cannot run script now as a script is already running&quot;" ID="ID_716335322" CREATED="1461185263923" MODIFIED="1461185318238"/>
 <node TEXT="new home after L. C. Rees has abandoned the project" ID="ID_1995811703" CREATED="1461194767683" MODIFIED="1461194827796" LINK="https://github.com/vboerchers/wikdshell"/>
+</node>
+<node TEXT="0.3.1">
+<node TEXT="ported to Freeplane 1.7"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_584948500" CREATED="1358397138405" MODIFIED="1460942569880">
