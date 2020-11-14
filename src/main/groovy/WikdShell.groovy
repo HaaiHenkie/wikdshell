@@ -69,6 +69,29 @@ class WikdShell extends Console {
 		run(frameWikdShellDelegates)
 	}
 
+	private GroovyShell updateNode(){
+		def variables = shell.context.variables;
+		def selected = variables.c.selected;
+		if(selected != null && variables.node != selected) {
+			Binding binding = new Binding(new HashMap(variables));
+			binding.variables.node = selected;
+			GroovyShell updatedShell = new GroovyShell(null, binding, config);
+			return updatedShell;
+		}
+		else
+			return shell;
+	}
+
+	void runScript(EventObject evt = null){
+		shell = updateNode();
+		super.runScript(evt);
+	}
+
+	void runSelectedScript(EventObject evt = null) {
+		shell = updateNode();
+		super.runSelectedScript(evt);
+	}
+
 	// Start a new window with a copy of current variables
 	@Override
 	void fileNewWindow(EventObject evt = null) {
