@@ -1,9 +1,10 @@
-*.class
+.classpath
 .gradle
 .project
 .settings
+bin
 build
-lib
+freeplane.dsld
 version.properties
 wikdShell-*addon.mm
 *.bak

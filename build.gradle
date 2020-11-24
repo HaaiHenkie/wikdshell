@@ -1,34 +1,40 @@
-apply plugin: 'groovy'
-
-targetCompatibility='1.8'
-
-libsDirName = "${rootDir}/lib"
-clean.doFirst { delete "${rootDir}/lib" }
+buildscript {
+    repositories {
+        maven { url "http://dl.bintray.com/freeplane/freeplane" }
+    }
+    dependencies {
+        classpath 'org.freeplane:gradle-freeplane-plugin:0.3'
+    }
+}
 
 repositories {
-	mavenCentral()
-	flatDir name: 'localGitDepsRepository',
-	dirs: [
-        "${rootDir}/../freeplane/BIN",
-        "${rootDir}/../freeplane/BIN/core/org.freeplane.core/lib",
-		"${rootDir}/../freeplane/BIN/plugins/org.freeplane.plugin.script/lib"
-	]
+    mavenCentral()
 }
 
-dependencies {
-    compile name: 'freeplanelauncher'
-    compile name: 'freeplaneviewer'
-	compile group: 'org.freeplane.script', name: 'plugin', version: '+'
-	compile ('org.codehaus.groovy:groovy-all:2.5.4') {
-        exclude group:'org.codehaus.groovy', module:'groovy-test'
-        exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
-        exclude group:'org.codehaus.groovy', module:'groovy-testng'
-        exclude group:'org.codehaus.groovy', module:'groovy-ant'
-        exclude group:'org.codehaus.groovy', module:'groovy-docgenerator'
-        exclude group:'org.codehaus.groovy', module:'groovy-groovydoc'
-        exclude group:'org.codehaus.groovy', module:'groovy-cli-commons'
-        exclude group:'org.codehaus.groovy', module:'groovy-cli-picocli'
-    }
-    compile 'org.codehaus.groovy:groovy-dateutil:2.5.4'
+apply plugin: 'org.freeplane.gradle-freeplane-plugin'
 
+freeplane {
+    // mandatory, freeplane installation directory.
+    // In this example it is taken from system environment.
+    freeplaneDirectory = System.env.FREEPLANE_DIR
+
+    // optional, addon source directory
+    // addonSourceDirectory = 'src/addon'
+
+    // optional, to be set only if more then one mind map file in the addon source directory
+    addonDefinitionMindMapFileName = 'wikdShell.mm'
+
+    // optional, includes
+    // includes = ['**/*']
+
+    // optional, excludes
+    // excludes = ['**/*.bak', '**/~*', '**/$~*.mm~']
+
+    // optional, max heap size for freeplane
+    // maxHeapSize = '1024m'
 }
+
+jar {
+    archiveFileName = 'wikdshell.jar'
+}
+
